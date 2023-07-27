@@ -6,11 +6,12 @@ const Auth = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(authActions.isLoggin());
+    document.querySelector(".form").reset();
   };
   return (
     <main className={classes.auth}>
       <section>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className="form">
           <div className={classes.control}>
             <label htmlFor="email">Email</label>
             <input type="email" id="email" />
